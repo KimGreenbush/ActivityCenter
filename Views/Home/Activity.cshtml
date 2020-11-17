@@ -1,0 +1,57 @@
+@using ActivityCenter.Models
+@model Activity
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style_activity.css">
+</head>
+
+<body>
+    <div id="container">
+
+        <header>
+            <h1>Dojo Activity Center</h1>
+            <p><a asp-action="Dashboard" asp-controller="Home">Home</a></p>
+            <p><a asp-action="Logout" asp-controller="RegLogin">Logout</a></p>
+        </header>
+
+        <div class="activity">
+            <h2>@Model.Title</h2>
+
+                @if (@Model.Creator.UserId == ViewBag.UserId)
+                {
+                    <td><a asp-action="Delete" asp-controller="Action"
+        asp-route-ActivityId="@Model.ActivityId"><button>Delete</button></a></td>
+                }
+                @if (@Model.Participants.Any(a => a.Participant.UserId == ViewBag.UserId))
+                        {
+                            <td><a asp-action="Join" asp-controller="Action" asp-route-ActivityId="@Model.ActivityId"><button>Leave</button></a></td>
+                        }
+                        else
+                        {
+                        <td><a asp-action="Join" asp-controller="Action" asp-route-ActivityId="@Model.ActivityId"><button>Join</button></a></td>
+                        }
+
+
+            <p>Event Coordinator: @Model.Creator.Name</p>
+            <p>Date: @Model.Date</p>
+            <p>Description: </p>
+            <blockquote>@Model.Description</blockquote>
+            <p>Participants:</p>
+            <ul>
+                @foreach (var participant in @Model.Participants)
+                {
+                    <li>@participant.Participant.Name</li>
+                }
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

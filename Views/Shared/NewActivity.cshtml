@@ -1,0 +1,30 @@
+@using ActivityCenter.Models
+@model Activity
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style_form.css">
+
+</head>
+<body>
+    <div id="container">
+
+    <header>
+        <h1>Dojo Activity Center</h1>
+        <p><a asp-action="Dashboard" asp-controller="Home">Home</a></p>
+        <p><a asp-action="Logout" asp-controller="RegLogin">Logout</a></p>
+    </header>
+
+    <form asp-action="CreateActivity" asp-controller="Action">
+        <partial name="ActivityPartial" model="Model" />
+        <button>Create Activity</button>
+    </form>
+
+</div>
+</body>
+</html>

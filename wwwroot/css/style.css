@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic", "Lucida Sans", sans-serif;
+}
+
+#container {
+    padding: 50px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.forms {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form {
+    max-width: 350px;
+}
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+label, input {
+    width: 49%;
+    margin-bottom: 5px;
+}
+
+button {
+    margin: 10px 0 0 auto;
+    padding: 2px;
+}

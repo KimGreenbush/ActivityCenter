@@ -1,0 +1,44 @@
+@using ActivityCenter.Models
+@model RegLogWrapper
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div id="container">
+
+        <header>
+            <h1>Welcome to the Dojo Activity Center</h1>
+        </header>
+
+        <div class="forms">
+            <form asp-action="RegisterUser" asp-controller="RegLogin" method="post">
+                <fieldset>
+                    <legend>Register</legend>
+                    <partial name="../RegLogin/UserPartial.cshtml" model="Model.RegisterForm" />
+                    <button type="submit">Register</button>
+                </fieldset>
+            </form>
+
+
+            <form asp-action="LoginUser" asp-controller="RegLogin" method="post">
+                <fieldset>
+                    <legend>Login</legend>
+                    <partial name="../RegLogin/LoginPartial.cshtml" model="Model.LoginForm" />
+                    <button type="submit">Login</button>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

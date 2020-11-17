@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic", "Lucida Console", sans-serif;
+}
+
+#container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    width: 320px;
+    margin: 50px auto auto 15px;
+}
+
+label, input {
+    height: 20px;
+    width: 48%;
+    padding: 2px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 3px;
+    margin: 0 auto;
+}
