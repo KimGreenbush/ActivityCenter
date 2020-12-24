@@ -1,11 +1,21 @@
 # ActivityCenter
 
-A C# exam from [Coding Dojo](https://www.codingdojo.com/).
+## Description
+This website creates users who can add activity events that other users can join or leave.
 
-I had 6 hours to implement the required features.
+### Background
+A C# exam from [Coding Dojo](https://www.codingdojo.com/). I had 6 hours to implement the required features.
 
-This was a first attempt. I successfully completed the exam but took another for higher marks (HobbyHub).
+### Features
+he activites are organized by date and expired(old) events are removed from the display.
 
-This website creates users who can add activity events that other users can join or leave. 
+## Visuals
 
-The activites are organized by date and expired(old) events are removed from the display.
+## Installation
+### Requirements
+
+## Acknowledgment
+I would like to thank the teachers and teacher's assistants at Coding Dojo(linked above) for their help and patience.
+
+## Project status
+This project is considered complete but may be expanded upon at a later time.
